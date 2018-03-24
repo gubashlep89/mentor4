@@ -1,0 +1,24 @@
+
+<%= simple_form_for(@user) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :user_mail %>
+    <%= f.input :user_phone %>
+    <%= f.input :user_address %>
+    <%= f.input :user_profession %>
+    <%= f.input :user_exp %>
+    <%= f.input :user_info %>
+    <%= f.input :user_vk %>
+    <%= f.input :user_inst %>
+    <%= f.input :user_fb %>
+    <%= f.input :user_tvitter %>
+    <%= f.input :user_telegram %>
+    <%= f.input :user_skype %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

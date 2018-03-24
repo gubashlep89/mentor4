@@ -1,16 +1,51 @@
-<div class="container">
-  <div class="row">
-    <h3>Users</h3>
-    <div class="column">
-      <table class="table">
-        <tbody>
-          <% @users.each do |user| %>
-            <tr>
-              <%= render user %>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User mail</th>
+      <th>User phone</th>
+      <th>User address</th>
+      <th>User profession</th>
+      <th>User exp</th>
+      <th>User info</th>
+      <th>User vk</th>
+      <th>User inst</th>
+      <th>User fb</th>
+      <th>User tvitter</th>
+      <th>User telegram</th>
+      <th>User skype</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.user_mail %></td>
+        <td><%= user.user_phone %></td>
+        <td><%= user.user_address %></td>
+        <td><%= user.user_profession %></td>
+        <td><%= user.user_exp %></td>
+        <td><%= user.user_info %></td>
+        <td><%= user.user_vk %></td>
+        <td><%= user.user_inst %></td>
+        <td><%= user.user_fb %></td>
+        <td><%= user.user_tvitter %></td>
+        <td><%= user.user_telegram %></td>
+        <td><%= user.user_skype %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
