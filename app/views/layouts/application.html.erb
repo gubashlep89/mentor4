@@ -6,7 +6,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% if user_signed_in? %>
     <%= render 'layouts/navigation_links' %>
+        <% else %>
+    <%= render 'layouts/navigation_out_links' %>
+        <% end %>
   </head>
 
   <body>
